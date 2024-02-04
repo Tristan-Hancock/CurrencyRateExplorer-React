@@ -3,7 +3,6 @@ import axios from 'axios';
 import './App.css'; 
 import ReactDOM from 'react-dom';
 import { FaHome } from "react-icons/fa";
-
 import { RiAdminFill } from "react-icons/ri";
 import { MdOutlineWorkHistory } from "react-icons/md";
 import { FaWallet } from "react-icons/fa";
@@ -61,31 +60,30 @@ const ForexRates = () => {
 
   return (
     <BrowserRouter>
-      <div className="App">
-        <div className="displaycontainer">
-          <header className="app-header">
-            {/* Your top header content */}
-          </header>
-          
-          <div className="main-content">
-           
-          </div>
-
-          {/* ... other components ... */}
-
-          <nav className="bottom-nav">
-            <Link to="/" className="stats-item">Home <FaHome /></Link>
-            <Link to="/wallet" className="stats-item"> Wallet <FaWallet /> </Link>
-            <Link to="/history" className="stats-item">
-               History <MdOutlineWorkHistory/>
-            </Link>
-            <Link to="/account-stats" className="stats-item">
-               Account Stats <RiAdminFill />
-            </Link>
-          </nav>
+    <div className="App">
+      <div className="displaycontainer">
+        <header className="app-header">
+          {/* Your top header content */}
+        </header>
+        
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/wallet" element={<WalletPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/account-stats" element={<AccountStatsPage />} />
+          </Routes>
         </div>
+
+        <nav className="bottom-nav">
+          <Link to="/" className="stats-item">Home <FaHome /></Link>
+          <Link to="/wallet" className="stats-item">Wallet <FaWallet /></Link>
+          <Link to="/history" className="stats-item">History <MdOutlineWorkHistory/></Link>
+          <Link to="/account-stats" className="stats-item">Account Stats <RiAdminFill /></Link>
+        </nav>
       </div>
-    </BrowserRouter>
+    </div>
+  </BrowserRouter>
    
   );
 };

@@ -13,8 +13,8 @@
 
 .displaycontainer {
   background-color: aliceblue;
-  height: 800px;
-  width: 450px;
+  height: 850px;
+  width: 550px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
@@ -23,19 +23,29 @@
 
 }
 .bottom-nav {
-  width: 410px;
-  background-color: rgba(255, 255, 255, 0);
+  width: 510px;
+  background-color: rgb(216, 212, 212);
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
   padding: 20px;
   height: max-content;
   /* If you need to raise the nav above some other fixed elements, use z-index */
+  display: flex;
+  justify-content: space-between; /* This will space out the items */
+  align-items: center; /*
   z-index: 10;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds shadow to the top of the nav */
-  margin-top: 751px;
+  margin-top: 764px;
+}
+.stats-item:last-child {
+  margin-right: 0;
 }
 .stats-item{
-  font-size: 17px;
+  font-size: 20px;
+  color: #1C1C1C;
+  text-decoration: none;
   
+ 
+ 
 }
